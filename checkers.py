@@ -1,9 +1,17 @@
 #!/usr/bin/env python
 
-import sys, logging, pygame
+import sys
+import logging
+import pygame
 from Board import Board, Piece, Square
 from AI import AI
+
 assert sys.version_info >= (3,4), 'This script requires at least Python 3.4'
+
+# mixer.init()
+# mixer.music.load('262258__gowlermusic__classical-suspense.ogg')
+# mixer.music.play()
+
 
 logging.basicConfig(format='[%(filename)s:%(lineno)d] %(message)s', level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -23,7 +31,8 @@ board_highlight = (255,224,102)
 
 pygame.init()
 font = pygame.font.SysFont("arial",30)
-		
+
+
 #----------------------------------------
 # helper functions
 
@@ -183,6 +192,9 @@ def main():
 	
 	print(winner + ' won in only ' + str(moves//2) + ' turns! Good job!')
 
+
+# while mixer.music.get_busy():
+# 	time.Clock().tick(10)
 
 if __name__ == "__main__":
 	main()

@@ -2,9 +2,9 @@
 class Square:
 	''' Describe a square on the board. It should draw itself and understand if (mouse) coordinates are inside its bounds'''
 	position = (col,row) = (0,0)
-	color = ''					#the primary color
-	alternate = ''				#an alternate color, for showing turn order
-	highlight = ''				#highlight color
+	color = 'Black'					#the primary color
+	alternate = 'board_alternate'				#an alternate color, for showing turn order
+	highlight = 'board_highlight'				#highlight color
 	highlighted = False
 	dim = (x1,y1,x2,y2) = (0,0,0,0)
 	size = (w,h) = (0,0)
@@ -102,8 +102,8 @@ class Board:
 class Piece:
 	''' Describe a player piece. Each piece can be alive or dead and can crowned a king'''
 	position = (col,row) = (0,0)
-	player = ''
-	color = ''
+	player = 'AI'
+	color = 'Black'
 	pos = (x,y) = (0,0)
 	dimensions = (w,h) = (0,0)
 	radius = 0
@@ -112,7 +112,7 @@ class Piece:
 	king = False
 	alive = True
 	highlight = ''
-	font = ''
+	font = 'Ariel'
 
 	def __init__(self, pos, player, color, highlight, dimensions, direction, font):
 		self.position = (self.col,self.row) = pos
